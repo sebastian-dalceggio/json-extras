@@ -1,0 +1,5 @@
+{
+    "first_key": "The {first_value} and more",
+    "second_key": "More than a {second_value}",
+    "thir_key": "This has no placeholders"
+}

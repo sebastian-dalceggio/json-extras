@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "json-extras"
+version = "0.1.0"
+description = ""
+authors = ["Sebastián Dalceggio <sdalceggio@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "json_extras"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.0.1"
+black = "^23.9.1"
+pytest = "^7.4.2"
+mypy = "^1.5.1"
+pre-commit = "^3.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
