@@ -3,9 +3,12 @@
 import re
 import json
 from pathlib import Path
+from typing import Dict
 
 
-def get_json_with_placeholders(file_path: Path, values: dict) -> dict:
+def get_json_with_placeholders(
+    file_path: Path, values: Dict[str, str]
+) -> Dict[str, str]:
     """Open a json file with variable placeholders and return a python dict
     with the real values in it.
 
@@ -23,7 +26,7 @@ def get_json_with_placeholders(file_path: Path, values: dict) -> dict:
 
 
 def replace_placeholders_in_string(
-    string_data: str, values: dict, character_for_sustitution: str = r"{}"
+    string_data: str, values: Dict[str, str], character_for_sustitution: str = r"{}"
 ) -> str:
     """Find an replace all the variable placeholders in a string. By
     default, all the placeholders has to be between brackets like
@@ -32,7 +35,7 @@ def replace_placeholders_in_string(
 
     Args:
         string_data (str): string with placeholders in it
-        values (dict): dictionary with the real value of each placeholder
+        values (Dict[str, str]): dictionary with the real value of each placeholder
         character_for_sustitution (str, optional): character used in the string
             to enclose the variables. Defaults to r"{}".
 
