@@ -4,18 +4,15 @@ repos:
     - id: pylint
       name: pylint
       entry: poetry run pylint json_extras/ test/
-      langague: python
-      types:
-      - python
+      language: system
+      types: [python]
     - id: black
       name: black
       entry: poetry run black .
-      language: python
-      types:
-      - python
+      language: system
+      types: [python]
     - id: mypy
       name: mypy
       entry: poetry run mypy .
-      language: python
-      types:
-      - python
+      language: system
+      types: [python]
