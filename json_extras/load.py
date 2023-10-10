@@ -3,12 +3,10 @@
 import re
 import json
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Any
 
 
-def get_json_with_placeholders(
-    file_path: Path, values: Dict[str, str]
-) -> Dict[str, str]:
+def get_json_with_placeholders(file_path: Path, values: Dict[str, str]) -> Any:
     """Open a json file with variable placeholders and return a python dict
     with the real values in it.
 
@@ -17,7 +15,7 @@ def get_json_with_placeholders(
         values (dict): dictionary with the real value of each placeholder
 
     Returns:
-        dict: python dictionary with the variables instead of the placeholders
+        Any: python dictionary with the variables instead of the placeholders
     """
     with open(file_path, "r", encoding="utf-8") as file:
         content = file.read().replace("\n", "")
